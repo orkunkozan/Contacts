@@ -11,12 +11,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Handlers\Contact\Commands\" />
-    <Folder Include="Handlers\Contact\ValidationRules\" />
-    <Folder Include="Handlers\Contact\Queries\" />
-    <Folder Include="Handlers\Person\Commands\" />
-    <Folder Include="Handlers\Person\Queries\" />
-    <Folder Include="Handlers\Person\ValidationRules\" />
+    <Folder Include="Handlers\PersonContact\Commands\" />
+    <Folder Include="Handlers\PersonContact\ValidationRules\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="10.4.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.4.0" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
   </ItemGroup>
 
 </Project>
