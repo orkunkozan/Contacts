@@ -1,0 +1,17 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Contacts
+/ContactMs/src/Rise.Contacts.Api/bin
+/ContactMs/src/Rise.Contacts.Api/obj
+/ContactMs/src/Rise.Contacts.Business/bin
+/ContactMs/src/Rise.Contacts.Business/obj
+/ContactMs/src/Rise.Contacts.Domain/bin
+/ContactMs/src/Rise.Contacts.Domain/obj
+/ContactMs/src/Rise.Contacts.Infrastructure/bin
+/ContactMs/src/Rise.Contacts.Infrastructure/obj
+/ContactMs/test/Rise.Contacts.Business.Test/bin
+/ContactMs/test/Rise.Contacts.Business.Test/obj
+/Rice.Core/bin
+/Rice.Core/obj
