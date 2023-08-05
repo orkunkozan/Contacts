@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Rise.Contacts.Infrastructure\Rise.Contacts.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Handlers\Contact\Commands\" />
+    <Folder Include="Handlers\Contact\ValidationRules\" />
+    <Folder Include="Handlers\Contact\Queries\" />
+    <Folder Include="Handlers\Person\Commands\" />
+    <Folder Include="Handlers\Person\Queries\" />
+    <Folder Include="Handlers\Person\ValidationRules\" />
+  </ItemGroup>
+
+</Project>
