@@ -11,9 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Dto\" />
     <Folder Include="Entities\ReadOnly\" />
-    <Folder Include="Entities\Owner\" />
   </ItemGroup>
 
 </Project>
