@@ -2,6 +2,7 @@ using Rice.Core.Middlewares;
 using Rise.Contacts.Business.Dependency;
 using Rise.Contacts.Infrastructure.Dependency;
 
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -13,7 +14,7 @@ builder.Services.AddSwaggerGen();
 builder.AddBusinessDependency();
 var app = builder.Build();
 
-app.UseMiddleware<ExceptionMiddleware>();
+app.UseMiddleware<ExceptionMiddleware>(); 
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

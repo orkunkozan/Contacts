@@ -8,7 +8,7 @@ using Rise.Contacts.Domain.Entities.Owner;
 
 namespace Rise.Contacts.Infrastructure.DataAccess.Contexts
 {
-    public class ContactContext : ProjectDbContext, IMsContext
+    public class ContactContext : ProjectDbContext, IMsContext 
     {
         public ContactContext(IConfiguration configuration, ICapPublisher capPublisher, IEntityChangeServices entityChangeServices) : 
             base(configuration, capPublisher, entityChangeServices)

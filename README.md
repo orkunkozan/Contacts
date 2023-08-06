@@ -1,93 +1,23 @@
-# Contacts
-Contacts
- 
-*Kiþinin iletiþim bilgilerini verir.
-HTTP_GET 
-https://localhost:7138/api/Contact/getPersonContacts/6'
+* Rabit MQ  instancesi gerekmektedir.
+* DB olarak Postgresql Instancesi gerekmektedir.
 
-Response  =>  HTTP200 
-[
-  {
-    "id": 3,
-    "contactType": 0,
-    "contactTypeText": "Telefon Numarasý",
-    "content": "0506330****"
-  },
-  {
-    "id": 4,
-    "contactType": 1,
-    "contactTypeText": "E-Posta",
-    "content": "orkun.koz****.com"
-  },
-  {
-    "id": 5,
-    "contactType": 2,
-    "contactTypeText": "Konum",
-    "content": "Mersin"
-  }
-]
+* Yukardaki iki instance için ilgili ms lerin appsetting lerinde gerekli düzenlemeler yapýlmalýdýr.
+Düzenlenecek  scopelar þöyledir : CapConfig  &   ConnectionStrings:PostgresContext     
 
-************************************************************
-
-*Contact Ekleme 
-HTTP_POST
-https://localhost:7138/api/Contact/Add
-Request Body => 
-{
-  "name": "string",
-  "surName": "string",
-  "company": "string"
-}
-
-Response => HTTP200 long (new record ID)
-
-************************************************************
-
-*Contact Silme 
-HTTP_DELETE
-https://localhost:7138/api/Contact/Delete/1
-
-Response => HTTP204 
-
-************************************************************
+* MS iletiþimi   https://localhost:7140/myCap/index.html   &&  https://localhost:7138/mycap/index.html  
+adresleri üzerinden takip edebilirsiniz.
 
 
-*Kiþileri listeleme 
-HTTP_GET
-https://localhost:7138/api/Person/getAll
+2 tane MS  oluþturuldu. 
 
-Response=>  HTTP200 
-[
-  {
-    "id": 6,
-    "name": "string",
-    "surName": "string",
-    "company": "Ankara"
-  },
-    {
-    "id": 7,
-    "name": "fgdfg",
-    "surName": "ertert",
-    "company": ""
-  }
-]
+Contact  MS  varlýklarý :  Kiþiler ve Ýletiþim Bilgileridir.
 
+Report MS  varlýklarý : Raporlar ve Rapor Datalarý dýr.
+Ek olarak  readonly   Kiþiler ve Ýletiþim bilgileri diðer MS üzerinden async olarak Report MS ye akmaktadýr.
 
-*Kiþi Ekleme
-HTTP_POST
-https://localhost:7138/api/Person/Add
-Request Body => 
-{
-  "name": "string",
-  "surName": "string",
-  "company": "string"
-}
+Ýletiþimi saðlayan CAP kütüphanesidir.  Microservice mimarisi olarak event driven yaklaþým benimsenmiþtir.
+Ek olarak CAP in sunduðu OUTBOX battern uygulanmýþtýr. 
 
-Response => HTTP200 long (new record ID)
+Proje Mimarisi olarak CQRS + Mediator  
 
-************************************************************
-
-*Kiþi Silme 
-HTTP_DELETE 
-https://localhost:7138/api/Person/Delete/1 
-Response => HTTP204
+Pipeline Behaver  AOP uygulanmýþtýr.

@@ -1,8 +1,9 @@
-﻿using Rice.Core.Context.Entity;
+﻿using Rice.Core.Context.Abstraction;
+using Rice.Core.Context.Entity;
 
 namespace Rise.Contacts.Domain.Entities.Owner
 {
-    public class Person : IEntity
+    public class Person : IEntity , IPublishEntity
     {
         public long Id { get; set; }
         public string Name { get; set; }

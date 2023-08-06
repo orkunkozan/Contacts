@@ -13,6 +13,7 @@ namespace Rise.Contacts.Business.Dependency
         public static void AddBusinessDependency(this WebApplicationBuilder builder)
         {
             builder.Services.AddScoped(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+            builder.Services.AddScoped(typeof(IPipelineBehavior<,>), typeof(PublishBehavior<,>));
             builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
             builder.Services.AddMediatR(Assembly.GetExecutingAssembly()); 
             builder.AddInfrastructureDependency();
