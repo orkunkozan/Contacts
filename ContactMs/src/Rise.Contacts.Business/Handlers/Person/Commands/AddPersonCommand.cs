@@ -1,11 +1,10 @@
-﻿using MediatR;
-using Microsoft.EntityFrameworkCore;
+﻿using MediatR; 
 using Rise.Contacts.Business.Handlers.Person.Models;
 using Rise.Contacts.Infrastructure.DataAccess.Contexts;
 
 namespace Rise.Contacts.Business.Handlers.Person.Commands
 {
-    public class AddPersonCommand : PersonDto , IRequest<Unit>
+    public class AddPersonCommand : AddPersonDto, IRequest<Unit>
     {   
         public class AddPersonCommandHandler : IRequestHandler<AddPersonCommand, Unit >
         {
@@ -17,15 +16,14 @@ namespace Rise.Contacts.Business.Handlers.Person.Commands
 
             public async Task<Unit> Handle(AddPersonCommand request, CancellationToken cancellationToken)
             {
-                var result = await _context.Persons
-                    .Select(s => new PersonDto
-                    {
-                        Company = s.Company, 
-                        Id = s.Id,
-                        Name = s.Name,
-                        SurName = s.SurName
-                    }).ToListAsync(cancellationToken);
-                return Unit.Value;
+                await _context.Persons.AddAsync(new Domain.Entities.Owner.Person
+                {
+                    Company = request.Company,
+                    Name = request.Name,
+                    SurName = request.SurName
+                },cancellationToken); 
+                await _context.SaveChangesAsync(cancellationToken); 
+                return Unit.Value;  
             }
         }
     }
