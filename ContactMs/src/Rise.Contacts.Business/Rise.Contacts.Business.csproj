@@ -7,13 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Rise.Contacts.Infrastructure\Rise.Contacts.Infrastructure.csproj" />
+    <Compile Remove="Handlers\Contact\ValidationRules1\**" />
+    <EmbeddedResource Remove="Handlers\Contact\ValidationRules1\**" />
+    <None Remove="Handlers\Contact\ValidationRules1\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Handlers\Contact\Commands\" />
-    <Folder Include="Handlers\Contact\ValidationRules\" />
-    <Folder Include="Handlers\Person\ValidationRules\" />
+    <ProjectReference Include="..\Rise.Contacts.Infrastructure\Rise.Contacts.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,6 +21,7 @@
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.4.0" />
     <PackageReference Include="MediatR" Version="10.0.1" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.2.3" />
   </ItemGroup>
 
 </Project>
