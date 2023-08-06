@@ -17,3 +17,11 @@
 /Rice.Core/obj
 /.vs
 /ContactMs/src/Rise.Contacts.Api/Rise.Contacts.Api.csproj.user
+/ReportMs/src/Rise.Report.Api/bin/Debug/net6.0
+/ReportMs/src/Rise.Report.Api/obj
+/ReportMs/src/Rise.Report.Business/bin/Debug/net6.0
+/ReportMs/src/Rise.Report.Business/obj
+/ReportMs/src/Rise.Report.Domain/bin/Debug/net6.0
+/ReportMs/src/Rise.Report.Domain/obj
+/ReportMs/src/Rise.Report.Infrastructure/bin
+/ReportMs/src/Rise.Report.Infrastructure/obj

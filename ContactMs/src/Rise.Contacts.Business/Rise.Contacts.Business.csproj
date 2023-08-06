@@ -8,8 +8,11 @@
 
   <ItemGroup>
     <Compile Remove="Handlers\Contact\ValidationRules1\**" />
+    <Compile Remove="Handlers\PersonContact\**" />
     <EmbeddedResource Remove="Handlers\Contact\ValidationRules1\**" />
+    <EmbeddedResource Remove="Handlers\PersonContact\**" />
     <None Remove="Handlers\Contact\ValidationRules1\**" />
+    <None Remove="Handlers\PersonContact\**" />
   </ItemGroup>
 
   <ItemGroup>

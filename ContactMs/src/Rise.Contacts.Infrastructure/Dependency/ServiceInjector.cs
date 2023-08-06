@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Rice.Core.Config;
+using Rice.Core.Context.Abstraction;
 using Rice.Core.Services.EntityChangeServices;
 using Rise.Contacts.Infrastructure.DataAccess.Contexts;
 
@@ -12,8 +13,8 @@ namespace Rise.Contacts.Infrastructure.Dependency
     {
         public static void AddInfrastructureDependency(this WebApplicationBuilder builder)
         {
-            builder.Services.AddDbContext<ContactContext>(ServiceLifetime.Scoped);
-            builder.Services.AddDbContext<ContactSubscribeDbContext>(ServiceLifetime.Scoped);
+            builder.Services.AddDbContext<IProjectContext,ContactContext>(ServiceLifetime.Scoped);  
+            builder.Services.AddDbContext<IProjectContext,ContactSubscribeDbContext>(ServiceLifetime.Scoped);
 
             builder.Services.AddScoped<IEntityChangeServices, EntityChangeServices>();
 

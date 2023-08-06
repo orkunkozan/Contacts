@@ -1,16 +1,8 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json.Linq;
 using Rice.Core.CustomExceptions;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
 using System.Net;
-using System.Security;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Rice.Core.Middlewares
 {

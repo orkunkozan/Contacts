@@ -1,12 +1,12 @@
-﻿using MediatR; 
+﻿using MediatR;
 using Rise.Contacts.Business.Handlers.Person.Models;
 using Rise.Contacts.Infrastructure.DataAccess.Contexts;
 
 namespace Rise.Contacts.Business.Handlers.Person.Commands
 {
     public class AddPersonCommand : AddPersonDto, IRequest<long>
-    {   
-        public class AddPersonCommandHandler : IRequestHandler<AddPersonCommand, long >
+    {
+        public class AddPersonCommandHandler : IRequestHandler<AddPersonCommand, long>
         {
             private readonly ContactContext _context;
             public AddPersonCommandHandler(ContactContext context)
@@ -22,8 +22,8 @@ namespace Rise.Contacts.Business.Handlers.Person.Commands
                     Name = request.Name,
                     SurName = request.SurName
                 };
-                await _context.Persons.AddAsync(newRecord, cancellationToken); 
-                await _context.SaveChangesAsync(cancellationToken);
+                await _context.Persons.AddAsync(newRecord,cancellationToken);
+                await _context.SaveChangesAsync(cancellationToken); 
                 return newRecord.Id;
 
             }

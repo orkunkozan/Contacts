@@ -16,6 +16,13 @@ namespace Rise.Contacts.Api.Controllers
         {
         }
 
+
+        /// <summary>
+        /// You can get person contacts information with person ID
+        /// </summary>
+        /// <param name="personId"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
         [Produces("application/json", "text/plain")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(List<ContactDto>))]
         [ProducesResponseType(StatusCodes.Status204NoContent)]

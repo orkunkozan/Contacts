@@ -1,6 +1,8 @@
-﻿namespace Rice.Core.Context.Abstraction
+﻿using Rice.Core.Context.Entity;
+
+namespace Rice.Core.Context.Abstraction
 {
-    public interface IReadOnlyEntity
+    public interface IReadOnlyEntity : IEntity
     {
     }
 }
