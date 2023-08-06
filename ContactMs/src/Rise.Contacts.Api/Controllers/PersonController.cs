@@ -33,7 +33,7 @@ namespace Rise.Contacts.Api.Controllers
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(PersonDto))]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [HttpPost("Add")]
-        public async Task<IActionResult> GetPersons(CancellationToken cancellationToken)
+        public async Task<IActionResult> AddPerson(CancellationToken cancellationToken)
         {
             var result = await _mediator.Send(new GetPersonsQuery(), cancellationToken);
             if (result.Any())
