@@ -11,8 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Handlers\PersonContact\Commands\" />
-    <Folder Include="Handlers\PersonContact\ValidationRules\" />
+    <Folder Include="Handlers\Contact\Commands\" />
+    <Folder Include="Handlers\Contact\ValidationRules\" />
+    <Folder Include="Handlers\Person\ValidationRules\" />
   </ItemGroup>
 
   <ItemGroup>

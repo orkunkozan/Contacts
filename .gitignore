@@ -15,3 +15,5 @@
 /ContactMs/test/Rise.Contacts.Business.Test/obj
 /Rice.Core/bin
 /Rice.Core/obj
+/.vs
+/ContactMs/src/Rise.Contacts.Api/Rise.Contacts.Api.csproj.user
